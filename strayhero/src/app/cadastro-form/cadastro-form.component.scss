@@ -1,0 +1,26 @@
+.form{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(243, 243, 243);
+    border: 2px solid transparent;
+    border-radius: 30px 40px 40px 50px;
+    text-align: center;
+}
+
+.form__title{
+    width: 400px;
+    height: 40px;
+    background-color: rgb(70, 70, 70);
+    border: 2px solid transparent;
+    border-radius: 30px 40px 0px 0px;
+    text-align: center;
+    font-family: Boogaloo;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+}
+
+.form__label{
+    font-family: Kalan-Regular;
+    font-size: 25px;
+}

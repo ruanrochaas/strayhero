@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: Boogaloo;
+    src: url("./assets/Boogaloo-Regular.otf");
+  }
+  
+  @font-face {
+    font-family: Kalan-Light;
+    src: url("./assets/Kalam-Light.ttf");
+  }
+  
+  @font-face {
+    font-family: Kalan-Regular;
+    src: url("./assets/Kalam-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: Kalan-Bold;
+    src: url("./assets/Kalam-Bold.ttf");
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.invisivel{
+    display: none;
+}
+
+.mr-10{
+  margin-right: 10px;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
+
+.botao__primario{
+  border: 2px solid transparent;
+  border-radius: 15px 10px 20px 15px;
+  background-color: rgb(70, 70, 70);
+  padding: 5px 20px;
+  color: white;
+  font-family: Boogaloo;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.botao__secundario{
+  border: 2px solid rgb(70, 70, 70);
+  border-radius: 15px 10px 20px 15px;
+  background-color: transparent;
+  padding: 5px 20px;
+  color: rgb(70, 70, 70);
+  font-family: Boogaloo;
+  font-size: 20px;
+  cursor: pointer;
+}
