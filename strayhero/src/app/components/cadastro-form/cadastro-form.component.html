@@ -1,17 +1,17 @@
 <form class="form">
   <h3 class="form__title">CADASTRO</h3>
-  <label class="form__label" for="">Email</label><br>
+  <div class="form__label">Email</div><br>
   <input class="form__input" type="email" placeholder="email@email.com" #email><br>
   <span class="form__feedback {{st_email}}">{{fb_email}}<br></span>
-  <label class="form__label" for="">Nome de Usuário</label><br>
-  <input class="form__input" type="text" placeholder="Nome de Usuário" #username><br>
+  <div class="form__label">Nome de Usuário</div><br>
+  <input class="form__input" type="text" placeholder="Usuário" #username><br>
   <span class="form__feedback {{st_nome}}">{{fb_nome}}<br></span>
-  <label class="form__label" for="">Senha</label><br>
+  <div class="form__label">Senha</div><br>
   <input class="form__input" type="password" placeholder="Digite a senha" #pass1><br>
   <span class="form__feedback {{st_senha1}}">{{fb_senha1}}<br></span>
-  <label class="form__label" for="">Repita a Senha</label><br>
+  <div class="form__label">Repita a Senha</div><br>
   <input class="form__input" type="password" placeholder="Repita a senha" #pass2><br>
   <span class="form__feedback {{st_senha2}}">{{fb_senha2}}<br></span>
-  <button class="botao__primario mr-10 mt-10" (click)="enviar(criarObj(email.value, username.value, pass1.value, pass2.value)); $event.preventDefault()">CADASTRAR</button>
-  <button class="botao__secundario mt-10">CANCELAR</button>
+  <button class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(criarObj(email.value, username.value, pass1.value, pass2.value)); $event.preventDefault()">CADASTRAR</button>
+  <button class="botao__secundario mt-20 mb-20">CANCELAR</button>
 </form>

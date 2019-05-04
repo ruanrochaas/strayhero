@@ -23,7 +23,7 @@ export class CadastroFormComponent {
   enviar(obj:any){
     if(obj == null) return;//corrigir depois
     this.cadastroService.cadastrar(obj).subscribe(
-      (res : any)=>{console.log(res);}
+      (res : any)=>{alert("Cadastro realizado com sucesso! =D")}
     );
   }
 

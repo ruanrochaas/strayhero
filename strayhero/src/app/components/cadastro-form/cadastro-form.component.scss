@@ -1,15 +1,28 @@
 .form{
     width: 330px;
-    height: 400px;
-    background-color: rgb(243, 243, 243);
+    background-color: #f2f2f2;
     border: 2px solid transparent;
     border-radius: 50px 25px 40px 50px;
     text-align: center;
+    margin: 15px auto;
+
+
+    .form__input{
+        width: 90%;
+        height: 30px;
+        border: 2px solid rgb(70, 70, 70);
+        border-radius: 15px 10px 10px 5px;
+        font-family: Kalan-Regular;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
 }
 
 .form__title{
+    transform: scaleY(1.1);
     width: 100%;
-    background-color: rgb(70, 70, 70);
+    background-color: #1759b1;
     border: 2px solid transparent;
     border-radius: 50px 25px 45px 25px;
     text-align: center;
@@ -21,6 +34,11 @@
 }
 
 .form__label{
+    display: inline-block;
+    width: 90%;
     font-family: Kalan-Regular;
     font-size: 25px;
+    text-align: left;
+    margin-top: 7px;
+    user-select: none;
 }
