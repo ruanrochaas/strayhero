@@ -1,3 +1,18 @@
+@keyframes animacao-dialogo1{
+    0%{
+        transform: rotateZ(0%);
+    }
+    80%{
+        transform: rotateZ(0%);
+    }
+    90%{
+        transform: rotateZ(20%);
+    }
+    100%{
+        transform: rotateZ(0%);
+    }
+}
+
 .dialogo1{
     width: 330px;
     height: 90px;
@@ -8,6 +23,7 @@
         width: 85px;
         z-index: 2;
         transform: translateX(250px);
+        animation: animacao-dialogo1 2s infinite;
     }
 
     .dialogo1__textcontainer{
