@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CadastroFormComponent } from './components/cadastro-form/cadastro-form.component';
 import { CaixaDialogo1Component } from './components/caixa-dialogo1/caixa-dialogo1.component';
 import { BackgroundComponent } from './components/background/background.component';
+import { BarraEquilibrioComponent } from './components/barra-equilibrio/barra-equilibrio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroFormComponent,
     CaixaDialogo1Component,
-    BackgroundComponent
+    BackgroundComponent,
+    BarraEquilibrioComponent
   ],
   imports: [
     BrowserModule,
