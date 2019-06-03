@@ -1,0 +1,63 @@
+$preto: rgb(0, 0, 0);
+$branco: rgb(255, 255, 255);
+$cinza: rgb(34, 34, 34);
+$verde: rgb(72,219,66);
+$vermelho: rgb(191,22,22);
+$amarelo: rgb(255,108,0);
+$larguraFonte: 12px;
+$larguraProgresso: 75;
+
+.container{
+
+    position: absolute;
+    top: 10px;
+
+    img{
+        z-index: +1;
+        width: 38px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+    }
+    .container__nivel{
+        top: 50px;
+        left: 30px;
+        position: absolute;
+        padding: 0 10px 2px 26px;
+        border-radius: 15px 10px 10px 5px;
+        max-width: 40px;
+        height: 15px;
+        background-color: $branco;
+        text-align: center;
+        align-self: center;
+        font-family: Kalan-Regular;
+        font-size: $larguraFonte;
+
+    }
+    .container__barra{
+        top: 67px;
+        left: 50px;
+        position: absolute;
+        border: 2px solid $cinza;
+        border-radius: 15px 10px 10px 5px;
+        width: 53px;
+        height: 13px;
+        text-align: center;
+        align-self: center;
+        font-family: Kalan-Regular;
+        font-size: $larguraFonte;
+
+        .container__barra__indicador{
+            // aqui deve-se alterar o valor para mostrar o o progresso do usuario
+            width: 70%;
+            height: 13px;
+            max-width: 100%;
+            border-radius: 15px 10px 10px 5px;
+            background-color: $amarelo;
+            text-align: center;
+            align-self: center;
+            font-family: Kalan-Regular;
+            font-size: $larguraFonte;
+        }
+    }
+}

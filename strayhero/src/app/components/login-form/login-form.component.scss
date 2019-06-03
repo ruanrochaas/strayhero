@@ -1,0 +1,86 @@
+@keyframes animacao-foco{
+    0% {
+        border: 2px solid rgb(41, 41, 41);
+        box-shadow: 0px 3px rgb(41, 41, 41);
+    }
+    80% {
+        border: 2px solid rgb(41, 41, 41);
+        box-shadow: 0px 3px rgb(41, 41, 41);
+    }
+    90% {
+        border: 2px solid rgb(41, 41, 41);
+        box-shadow: 1px 3px rgb(41, 41, 41);
+    }
+    100% {
+        border: 2px solid rgb(70, 70, 70);
+        box-shadow: 0px 3px rgb(41, 41, 41);
+    }
+}
+
+@keyframes animacao-foco-erro{
+    0% {
+        border: 2px solid red; /* Rever cor de erro */
+        box-shadow: 0px 3px red;
+    }
+    80% {
+        border: 2px solid red;
+        box-shadow: 0px 3px red;
+    }
+    90% {
+        border: 2px solid red;
+        box-shadow: 1px 3px red;
+    }
+    100% {
+        border: 2px solid red;
+        box-shadow: 0px 3px red;
+    }
+}
+
+.form{
+    width: 330px;
+    background-color: #f2f2f2;
+    border: 2px solid transparent;
+    border-radius: 50px 25px 40px 50px;
+    text-align: center;
+    margin: 15px auto;
+
+
+    .form__input{
+        width: 90%;
+        height: 30px;
+        border: 2px solid rgb(70, 70, 70);
+        border-radius: 15px 10px 10px 5px;
+        font-family: Kalan-Regular;
+        font-size: 20px;
+        padding-top: 5px;
+        padding-left: 10px;
+    }
+
+    .form__input:focus{
+        animation: animacao-foco 2s infinite;
+    }
+}
+
+.form__title{
+    transform: scaleY(1.1);
+    width: 100%;
+    background-color: #1759b1;
+    border: 2px solid transparent;
+    border-radius: 50px 25px 45px 25px;
+    text-align: center;
+    font-family: Boogaloo;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.form__label{
+    display: inline-block;
+    width: 90%;
+    font-family: Kalan-Regular;
+    font-size: 25px;
+    text-align: left;
+    margin-top: 7px;
+    user-select: none;
+}

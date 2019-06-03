@@ -1,15 +1,18 @@
-$preto: #000000;
-$branco: #ffffff;
-$cinza: #222222;
-$vervelho: #e00101;
-$verde: #43e035;
-$amarelo: #ffcd61;
-$larguraBarra: 65vw;
+$preto: rgb(0, 0, 0);
+$branco: rgb(255, 255, 255);
+$cinza: rgb(34, 34, 34);
+$verde: rgb(72,219,66);
+$vermelho: rgb(191,22,22);
+$amarelo: rgb(255,108,0);
+// $larguraBarra: 65vw;
+$larguraBarra: 61%;
 $larguraFonte: 12px;
 
 .container{
     width: 100vw;
-    .recursos{
+    position: absolute;
+    z-index: +1;
+    .container__recursos{
         position: absolute;
         left: 10px;
         top: 0;
@@ -21,7 +24,7 @@ $larguraFonte: 12px;
             left: 10px;
             width: 38px;
         }
-        .nome{
+        .container__recursos__nome{
             z-index: -1;
             position: absolute;
             top: 12px;
@@ -37,11 +40,14 @@ $larguraFonte: 12px;
             font-size: $larguraFonte;
         }
     }
-    .containerBarra{
+    .container__containerbarra{
         position: relative;
         top: 10px;
         z-index: -1;
-        .barra {
+        display: flex;
+        justify-content: center;
+
+        .container__containerbarra__vermenho{
             display: flex;
             justify-content: center;
             padding: 0 10px;
@@ -49,22 +55,64 @@ $larguraFonte: 12px;
             width: $larguraBarra;
             height: 10px;
             border: 2px solid $cinza;
-            border-radius: 15px 15px 15px 15px;
-            background: linear-gradient(to right, $vervelho, $amarelo, $verde, $amarelo, $vervelho);
-            .indicador{
+            border-radius: 15px 15px 5px 5px;
+            background-color: $vermelho;
+
+            .container__containerbarra__vermenho__amarelo{
+                background-color: $amarelo;
+                width: 70%;
+                display: flex;
+                justify-content: center;
+                border-radius: 15px 15px 5px 5px;
+
+                .container__containerbarra__vermenho__amarelo__verde{
+                    background-color: $verde;
+                    width: 50%;
+                    border-radius: 15px 15px 5px 5px;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .container__containerbarra__indicador{
                 width: 5px;
                 background-color: $branco;
                 height: 15px;
-                border-radius: 10px;
+                border-radius: 5px;
                 position: relative;
-                // O codigo abaixo pra mover o indicador so funciona do valor 50% até o valor 150 mas a barra é responsiva
-                left: calc(100% - #{$larguraBarra}); 
-                top: 0;
+                // O codigo abaixo pra mover o indicador so funciona do valor -25% até o valor 75% sendo 25% o valor equivalente ao centro, mas a barra é responsiva
+                left: calc(25% - #{$larguraBarra});
                 align-self: center;
             }
+
         }
+
+        
+
+        // .barra {
+        //     display: flex;
+        //     justify-content: center;
+        //     padding: 0 10px;
+        //     margin: 20px auto ;
+        //     width: $larguraBarra;
+        //     height: 10px;
+        //     border: 2px solid $cinza;
+        //     border-radius: 15px 15px 15px 15px;
+        //     background: linear-gradient(to right, $vermelho, $amarelo, $verde, $amarelo, $vervelho);
+        //     .indicador{
+        //         width: 5px;
+        //         background-color: $branco;
+        //         height: 15px;
+        //         border-radius: 10px;
+        //         position: relative;
+        //         // O codigo abaixo pra mover o indicador so funciona do valor 50% até o valor 150 mas a barra é responsiva
+        //         left: calc(100% - #{$larguraBarra}); 
+        //         top: 0;
+        //         align-self: center;
+        //     }
+        // }
     }
-    .cuidados{
+    .container__cuidados{
         position: absolute;
         right: 115px;
         top: 0;
@@ -76,7 +124,7 @@ $larguraFonte: 12px;
             right: -95px;
             width: 38px;
         }
-        .nome{
+        .container__cuidados__nome{
             z-index: -1;
             position: absolute;
             top: 12px;
