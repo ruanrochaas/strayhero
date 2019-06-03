@@ -20,12 +20,12 @@ $larguraProgresso: 75;
         left: 20px;
     }
     .container__nivel{
-        top: 50px;
-        left: 30px;
+        top: 58px;
+        left: 35px;
         position: absolute;
         padding: 0 10px 2px 26px;
         border-radius: 15px 10px 10px 5px;
-        max-width: 40px;
+        max-width: 50px;
         height: 15px;
         background-color: $branco;
         text-align: center;
@@ -35,12 +35,12 @@ $larguraProgresso: 75;
 
     }
     .container__barra{
-        top: 67px;
+        top: 75px;
         left: 50px;
         position: absolute;
         border: 2px solid $cinza;
         border-radius: 15px 10px 10px 5px;
-        width: 53px;
+        width: 60px;
         height: 13px;
         text-align: center;
         align-self: center;
