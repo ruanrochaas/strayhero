@@ -6,6 +6,6 @@
     <div class="form__label">Senha</div><br>
     <input class="form__input" type="password" placeholder="Digite a senha" #pass1><br>
     <span class="form__feedback {{st_senha1}}">{{fb_senha1}}<br></span>
-    <button class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(); $event.preventDefault()">ENTRAR</button>
+    <button [routerLink]="['/index']" routerLinkActive="router-link-active"  class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(); $event.preventDefault()">ENTRAR</button>
     <button class="botao__secundario mt-20 mb-20">CANCELAR</button>
   </form>

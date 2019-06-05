@@ -42,7 +42,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
