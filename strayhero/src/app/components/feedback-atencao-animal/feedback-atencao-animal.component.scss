@@ -1,0 +1,40 @@
+$preto: rgb(0, 0, 0);
+$branco: rgb(255, 255, 255);
+$cinza: rgb(34, 34, 34);
+$verde: rgb(72,219,66);
+$vermelho: rgb(191,22,22);
+$laranja: rgb(255,108,0);
+
+.container{
+    
+    background: $branco;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate( -50% );
+
+    .container__imagem{
+        // width: 10px;
+        // height: 10px;
+
+    }
+}
+
+.container::after{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid $branco;
+    bottom: -5px;  
+    left: 50%;
+    transform: translate( -50% );
+}
+
+.container:hover{
+    background-color: $laranja;
+}

@@ -1,0 +1,107 @@
+$preto: rgb(0, 0, 0);
+$branco: rgb(255, 255, 255);
+$cinza: rgb(34, 34, 34);
+$verde: rgb(72,219,66);
+$vermelho: rgb(191,22,22);
+$laranja: rgb(255,108,0);
+$pretoTraparente: rgba(0, 0, 0, 0.575);
+
+.container{
+
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: $pretoTraparente;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .container__modal{
+        
+        width: 70vw;
+        height: 50vh;
+        background-color: $branco;
+        border-radius: 35px 20px;
+        overflow: auto;
+
+        .container__modal__titulo{
+            position: fixed;
+            background-color: $vermelho;
+            color: $branco;
+            width: 70%;
+            height: 50px;
+            border-radius: 35px 20px 0 0;
+            display: flex;
+            justify-content: center;
+
+            .container__modal__titulo__texto{
+                font-family: Boogaloo;
+                font-size: 30px;
+                align-self: center;
+            }
+        }
+    
+        .container__modal__corpo{
+            display: flex;
+            justify-content: center;
+
+            .container__modal__corpo__texto{
+                font-family: Kalan-Regular;
+                width: 100%;
+                margin: 60px 20px 20px 20px;
+                box-sizing: border-box;
+                text-align: justify;
+            }
+    
+        }
+
+        .container__modal__botoes{
+
+            position: fixed;
+            background-color: $branco;
+            width: 70%;
+            height: 55px;
+            border-radius: 0 0 35px 20px;
+            display: flex;
+            justify-content: center;
+            bottom: 160px;
+
+            .container__modal__botoes__ok{
+                border: 2px solid transparent;
+                border-radius: 15px 10px 20px 15px;
+                background-color: $vermelho;
+                width: 65px;
+                height: 35px;
+                padding: 5px;
+                color: $branco;
+                font-family: Boogaloo;
+                font-size: 20px;
+                cursor: pointer;
+                margin: 10px;
+                outline:0;
+            }
+
+            .container__modal__botoes__cancelar{
+                border: 2px solid $cinza;
+                border-radius: 15px 10px 20px 15px;
+                background-color: transparent;
+                width: 115px;
+                height: 35px;
+                padding: 5px;
+                color: $cinza;
+                font-family: Boogaloo;
+                font-size: 20px;
+                cursor: pointer;
+                margin: 10px;
+                outline:0;
+            }
+
+
+        }
+
+    }
+
+    
+}

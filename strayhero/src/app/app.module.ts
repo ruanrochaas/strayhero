@@ -21,6 +21,8 @@ import { CaixaDialogo2Component } from './components/caixa-dialogo2/caixa-dialog
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FeedbackAtencaoAnimalComponent } from './components/feedback-atencao-animal/feedback-atencao-animal.component';
+import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario/feedback-acao-usuario.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { environment } from '../environments/environment';
     TelaLoginComponent,
     AnuncioComponent,
     CaixaDialogo2Component,
-    LoginFormComponent
+    LoginFormComponent,
+    FeedbackAtencaoAnimalComponent,
+    FeedbackAcaoUsuarioComponent
   ],
   imports: [
     BrowserModule,
