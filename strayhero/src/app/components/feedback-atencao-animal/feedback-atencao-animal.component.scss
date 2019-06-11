@@ -34,3 +34,7 @@ $laranja: rgb(255,108,0);
     left: 50%;
     transform: translate( -50% );
 }
+
+.container:hover{
+    background-color: $laranja;
+}

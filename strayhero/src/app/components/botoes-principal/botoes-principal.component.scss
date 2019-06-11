@@ -24,6 +24,7 @@ $larguraFonte: 12px;
         // background-color: white;
         // border-radius: 20px 12px 18px 9px;
         // transform: rotate(-7deg);
+        outline:0;
     }
 
     .container__menu{
@@ -31,6 +32,7 @@ $larguraFonte: 12px;
         height: 50px;
         // background-color: $cinza;
         // border-radius: 15px 10px 10px 5px;
+        outline:0;
     }
 
     .container__notificacoes{
@@ -38,5 +40,6 @@ $larguraFonte: 12px;
         height: 38px;
         // background-color: $amarelo;
         // border-radius: 15px 10px 10px 5px;
+        outline:0;
     }
 }
