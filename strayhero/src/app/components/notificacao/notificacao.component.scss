@@ -27,10 +27,10 @@ $pretoTraparente: rgba(0, 0, 0, 0.575);
         overflow: auto;
 
         .container__modal__titulo{
-            position: fixed;
+            height: 20%;
             background-color: $vermelho;
             color: $branco;
-            width: 70%;
+            width: 100%;
             height: 50px;
             border-radius: 35px 20px 0 0;
             display: flex;
@@ -44,7 +44,8 @@ $pretoTraparente: rgba(0, 0, 0, 0.575);
         }
     
         .container__modal__corpo{
-            display: flex;
+            height: 60%;
+            overflow: hidden;
             justify-content: center;
 
             .container__modal__corpo__texto{
@@ -58,15 +59,13 @@ $pretoTraparente: rgba(0, 0, 0, 0.575);
         }
 
         .container__modal__botoes{
-
-            position: fixed;
+            height: 20%;
             background-color: $branco;
-            width: 70%;
+            width: 100%;
             height: 55px;
             border-radius: 0 0 35px 20px;
             display: flex;
             justify-content: center;
-            bottom: 160px;
 
             .container__modal__botoes__ok{
                 border: 2px solid transparent;
