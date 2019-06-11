@@ -1,0 +1,35 @@
+$preto: rgb(0, 0, 0);
+$branco: rgb(255, 255, 255);
+$cinza: rgb(34, 34, 34);
+$verde: rgb(72,219,66);
+$vermelho: rgb(191,22,22);
+$laranja: rgb(255,108,0);
+
+.feedback{
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    background-color: $branco;
+    border-radius: 15px 15px 10px 5px;
+    box-shadow: 0 5px 0 0 rgba(0,0,0, 0.2);
+    transform: rotate(-8deg);
+    color: $preto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    
+    .feedback__texto{
+        font-family: Boogaloo;
+        font-size: 25px;
+        color: $verde;
+        
+
+    }
+
+}

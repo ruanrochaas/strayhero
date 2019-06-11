@@ -19,6 +19,8 @@ import { TelaLoginComponent } from './components/tela-login/tela-login.component
 import { AnuncioComponent } from './components/anuncio/anuncio.component';
 import { CaixaDialogo2Component } from './components/caixa-dialogo2/caixa-dialogo2.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { FeedbackAtencaoAnimalComponent } from './components/feedback-atencao-animal/feedback-atencao-animal.component';
+import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario/feedback-acao-usuario.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     TelaLoginComponent,
     AnuncioComponent,
     CaixaDialogo2Component,
-    LoginFormComponent
+    LoginFormComponent,
+    FeedbackAtencaoAnimalComponent,
+    FeedbackAcaoUsuarioComponent
   ],
   imports: [
     BrowserModule,
