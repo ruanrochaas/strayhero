@@ -19,6 +19,8 @@ import { TelaLoginComponent } from './components/tela-login/tela-login.component
 import { AnuncioComponent } from './components/anuncio/anuncio.component';
 import { CaixaDialogo2Component } from './components/caixa-dialogo2/caixa-dialogo2.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

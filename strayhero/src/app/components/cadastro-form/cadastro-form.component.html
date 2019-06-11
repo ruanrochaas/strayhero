@@ -1,18 +1,14 @@
 <form class="form">
   <h3 class="form__title">CADASTRO</h3>
   <div class="form__label">Email</div><br>
-  <input class="form__input" type="email" placeholder="email@email.com" #email><br>
-  <span class="form__feedback {{st_email}}">{{fb_email}}<br></span>
+  <input class="form__input {{cl_email}}" type="email" placeholder="email@email.com" value="{{v_email}}" (focus)="cl_email = ''" #email><br>
   <div class="form__label">Nome de Usuário</div><br>
-  <input class="form__input" type="text" placeholder="Usuário" #username><br>
-  <span class="form__feedback {{st_nome}}">{{fb_nome}}<br></span>
+  <input class="form__input {{cl_nome}}" type="text" placeholder="Usuário" value="{{v_nome}}" (focus)="cl_nome = ''" #username><br>
   <div class="form__label">Senha</div><br>
-  <input class="form__input" type="password" placeholder="Digite a senha" #pass1><br>
-  <span class="form__feedback {{st_senha1}}">{{fb_senha1}}<br></span>
+  <input class="form__input {{cl_senha1}}" type="password" placeholder="Digite a senha" (focus)="cl_senha1 = ''" #pass1><br>
   <div class="form__label">Repita a Senha</div><br>
-  <input class="form__input" type="password" placeholder="Repita a senha" #pass2><br>
-  <span class="form__feedback {{st_senha2}}">{{fb_senha2}}<br></span>
-  <button [routerLink]="['/login']" routerLinkActive="router-link-active"  class="botao__primario mr-10 mt-20 mb-20" >CADASTRAR</button>
-  <!-- (click)="enviar(criarObj(email.value, username.value, pass1.value, pass2.value)); $event.preventDefault()" -->  <!-- ALTERAR ISSO AQUI DEPOIS -->
+  <input class="form__input {{cl_senha2}}" type="password" placeholder="Repita a senha" (focus)="cl_senha2 = ''" #pass2><br>
+  <button class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(criarObj(email.value, username.value, pass1.value, pass2.value)); $event.preventDefault()">CADASTRAR</button>
+  <!-- [routerLink]="['/login']" routerLinkActive="router-link-active" -->  <!-- ALTERAR ISSO AQUI DEPOIS -->
   <button class="botao__secundario mt-20 mb-20" >CANCELAR</button>
 </form>

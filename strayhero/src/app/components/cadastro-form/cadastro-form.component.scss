@@ -54,10 +54,15 @@
         font-size: 20px;
         padding-top: 5px;
         padding-left: 10px;
+        outline: none;
     }
 
     .form__input:focus{
         animation: animacao-foco 2s infinite;
+    }
+
+    .erro{
+        animation: animacao-foco-erro 2s infinite;
     }
 }
 

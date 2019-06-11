@@ -1,11 +1,9 @@
 <form class="form">
-    <h3 class="form__title">LOGIN</h3>
-    <div class="form__label">Email</div><br>
-    <input class="form__input" type="email" placeholder="email@email.com" #email><br>
-    <span class="form__feedback {{st_email}}">{{fb_email}}<br></span>
-    <div class="form__label">Senha</div><br>
-    <input class="form__input" type="password" placeholder="Digite a senha" #pass1><br>
-    <span class="form__feedback {{st_senha1}}">{{fb_senha1}}<br></span>
-    <button [routerLink]="['/index']" routerLinkActive="router-link-active"  class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(); $event.preventDefault()">ENTRAR</button>
-    <button class="botao__secundario mt-20 mb-20">CANCELAR</button>
-  </form>
+  <h3 class="form__title">LOGIN</h3>
+  <div class="form__label">Email</div><br>
+  <input class="form__input" type="email" placeholder="email@email.com" #email><br>
+  <div class="form__label">Senha</div><br>
+  <input class="form__input" type="password" placeholder="Digite a senha" #pass1><br>
+  <button class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(); $event.preventDefault()">ENTRAR</button>
+  <button class="botao__secundario mt-20 mb-20">CANCELAR</button>
+</form>

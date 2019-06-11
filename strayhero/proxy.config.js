@@ -5,4 +5,4 @@ const proxy = [
       pathRewrite: {'^/api' : ''}
     }
   ];
-  module.exports = proxy;
+module.exports = proxy;
