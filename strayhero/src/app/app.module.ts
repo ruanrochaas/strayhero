@@ -20,9 +20,11 @@ import { AnuncioComponent } from './components/anuncio/anuncio.component';
 import { CaixaDialogo2Component } from './components/caixa-dialogo2/caixa-dialogo2.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 import { FeedbackAtencaoAnimalComponent } from './components/feedback-atencao-animal/feedback-atencao-animal.component';
 import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario/feedback-acao-usuario.component';
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario
     AppRoutingModule,
     HttpClientModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
