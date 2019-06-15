@@ -26,13 +26,10 @@ $larguraProgresso: 75;
         position: absolute;
         padding: 0 10px 2px 26px;
         border-radius: 15px 10px 10px 5px;
-        max-width: 50px;
-        height: 15px;
-        background-color: $branco;
-        text-align: center;
-        align-self: center;
-        font-family: Kalan-Regular;
-        font-size: $larguraFonte;
+        background-color: white;
+        font-family: Bonk;
+        font-size: 16px;
+        letter-spacing: 1px;
 
     }
     .container__barra{

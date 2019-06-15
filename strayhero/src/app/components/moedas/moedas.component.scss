@@ -1,7 +1,7 @@
 $preto: rgb(0, 0, 0);
 $branco: rgb(255, 255, 255);
 $cinza: rgb(34, 34, 34);
-$verde: rgb(72,219,66);
+$verde: #92C400;
 $vermelho: rgb(191,22,22);
 $amarelo: rgb(255,108,0);
 $larguraFonte: 12px;
@@ -29,8 +29,8 @@ $larguraProgresso: 75;
         background-color: $amarelo;
         text-align: center;
         align-self: center;
-        font-family: Kalan-Regular;
-        font-size: $larguraFonte;
+        font-family: Bonk;
+        letter-spacing: 1px;
 
         // z-index: -1;
         // position: absolute;

@@ -23,7 +23,7 @@ export class LoginFormComponent implements OnInit {
     let obj = this.criarObj(email,pass);
     if(obj == null) return;//corrigir depois
     this.loginService.logar(obj).then((res)=>{
-      localStorage.setItem("usuarioLogado",res._id);
+      // localStorage.setItem("usuarioLogado",res._id);
       this.roteador.navigate(["/index"]);
     }).catch((e)=>{
       this.feedbackErro(e);
