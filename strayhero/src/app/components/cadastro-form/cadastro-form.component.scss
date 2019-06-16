@@ -1,56 +1,149 @@
+$Rosa1: #fa005f;
+$RosaSombra: #DE003D;
+
+$Vermelho1: #F32E2E;
+$Vermelho2: #DF0F0F;
+$Vermelho3: #FDACA9;
+
+$Amarelo1: #fae900;
+$AmareloBalão: #FFBE00;
+
+$Laranja1: #F56800;
+$LaranjaSombra: #E86300;
+
+$Azul1: #00e0ff;
+$Azul2: #390be3;
+$Azul3: #11438a;
+$AzulHover: #B6CAD8;
+
+$Verde2: #a1c21d;
+$Verde1: #92C400;
+
+$Preto: #000000;
+$Branco: #ffffff;
+$Cinza: #222222;
+
+
+
 @keyframes animacao-foco{
     0% {
-        border: 2px solid rgb(41, 41, 41);
-        box-shadow: 0px 3px rgb(41, 41, 41);
+        border: 2px solid $Azul3;
+        box-shadow: 0px 3px $Azul3;
     }
-    80% {
-        border: 2px solid rgb(41, 41, 41);
-        box-shadow: 0px 3px rgb(41, 41, 41);
+    25% {
+        border: 2px solid $AzulHover;
+        box-shadow: 0px 3px $AzulHover;
     }
-    90% {
-        border: 2px solid rgb(41, 41, 41);
-        box-shadow: 1px 3px rgb(41, 41, 41);
+    50% {
+        border: 2px solid $Azul3;
+        box-shadow: 0px 3px $Azul3;
+    }
+    75% {
+        border: 2px solid $AzulHover;
+        box-shadow: 0px 3px $AzulHover;
     }
     100% {
-        border: 2px solid rgb(70, 70, 70);
-        box-shadow: 0px 3px rgb(41, 41, 41);
+        border: 2px solid $Azul3;
+        box-shadow: 0px 3px $Azul3;
     }
+
+    
 }
 
 @keyframes animacao-foco-erro{
     0% {
-        border: 2px solid red; /* Rever cor de erro */
-        box-shadow: 0px 3px red;
+        border: 2px solid $Vermelho2;
+        box-shadow: 0px 3px $Vermelho2;
+        background-color: $Vermelho3;
     }
-    80% {
-        border: 2px solid red;
-        box-shadow: 0px 3px red;
+    25% {
+        border: 2px solid $Vermelho3;
+        box-shadow: 0px 3px $Vermelho3;
+        background-color: $Vermelho3;
     }
-    90% {
-        border: 2px solid red;
-        box-shadow: 1px 3px red;
+    50% {
+        border: 2px solid $Vermelho2;
+        box-shadow: 0px 3px $Vermelho2;
+        background-color: $Vermelho3;
+    }
+    75% {
+        border: 2px solid $Vermelho3;
+        box-shadow: 0px 3px $Vermelho3;
+        background-color: $Vermelho3;
     }
     100% {
-        border: 2px solid red;
-        box-shadow: 0px 3px red;
+        border: 2px solid $Vermelho2;
+        box-shadow: 0px 3px $Vermelho2;
+        background-color: $Vermelho3;
     }
 }
 
 .form{
-    width: 330px;
+
+    .invisivel{
+        display: none;
+    }
+    
+    .mr-10{
+      margin-right: 10px;
+    }
+    
+    .mt-20{
+      margin-top: 20px;
+    }
+    
+    .mb-20{
+      margin-bottom: 20px;
+    }
+    
+    .ml-10{
+      margin-left: 10px;
+    }
+    
+    .botao__primario{
+      border: 2px solid transparent;
+      border-radius: 20px 20px 20px 9px;
+      background-color: $Rosa1;
+      padding: 5px 15px;
+      color: white;
+      font-family: Bonk;
+      font-size: 20px;
+      cursor: pointer;
+      outline:0;
+      box-shadow: 1px 4px 0px 0px $RosaSombra;
+      letter-spacing: 1px
+    }
+    
+    .botao__secundario{
+      border: 2px solid $Rosa1;
+      border-radius: 20px 20px 9px 20px;
+      background-color: transparent;
+      padding: 5px 15px;
+      color: $Rosa1;
+      font-family: Bonk;
+      font-size: 20px;
+      cursor: pointer;
+      outline:0;
+      box-shadow: 1px 4px 0px 0px $RosaSombra;
+      letter-spacing: 1px;
+    }
+
+
+    width: 80%;
     background-color: #f2f2f2;
-    border: 2px solid transparent;
-    border-radius: 50px 25px 40px 50px;
+    border: 5px solid $Laranja1;
+    border-radius: 30px 25px 10px 50px;
     text-align: center;
     margin: 15px auto;
+    box-shadow: 1px 4px 0px 0px $LaranjaSombra;
 
 
     .form__input{
         width: 90%;
         height: 30px;
-        border: 2px solid rgb(70, 70, 70);
+        border: 2px solid $Azul3;
         border-radius: 15px 10px 10px 5px;
-        font-family: Kalan-Regular;
+        font-family: Lato-Italic;
         font-size: 20px;
         padding-top: 5px;
         padding-left: 10px;
@@ -58,34 +151,49 @@
     }
 
     .form__input:focus{
-        animation: animacao-foco 2s infinite;
+        animation: animacao-foco 2s infinite linear;
+        background-color: $AzulHover;
     }
 
     .erro{
         animation: animacao-foco-erro 2s infinite;
     }
-}
 
-.form__title{
-    transform: scaleY(1.1);
-    width: 100%;
-    background-color: #1759b1;
-    border: 2px solid transparent;
-    border-radius: 50px 25px 45px 25px;
-    text-align: center;
-    font-family: Boogaloo;
-    font-size: 30px;
-    color: white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
-.form__label{
-    display: inline-block;
-    width: 90%;
-    font-family: Kalan-Regular;
-    font-size: 25px;
-    text-align: left;
-    margin-top: 7px;
-    user-select: none;
+    .form__title{
+        transform: scaleY(1.1);
+        width: 103%;
+        background-color: #fa005f;
+        border-radius: 50px 25px 45px 25px;
+        text-align: center;
+        font-family: Bonk;
+        letter-spacing: 4px;
+        font-size: 30px;
+        color: white;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        box-shadow: 1px 4px 0px 0px #d40252;
+        margin-top: -3px;
+        margin-left: -5px;
+    }
+
+    .form__label{
+        display: inline-block;
+        width: 90%;
+        font-family: Bonk;
+        letter-spacing: 1px;
+        font-size: 20px;
+        text-align: left;
+        margin-top: 20px;
+        user-select: none;
+    }
+
+    .form__botao__jaCadastrado{
+        font-family: Bonk;
+        letter-spacing: 1px;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: $Preto
+    }
+
 }

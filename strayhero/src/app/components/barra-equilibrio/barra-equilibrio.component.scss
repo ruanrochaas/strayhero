@@ -1,9 +1,28 @@
-$preto: rgb(0, 0, 0);
-$branco: rgb(255, 255, 255);
-$cinza: rgb(34, 34, 34);
-$verde: rgb(72,219,66);
-$vermelho: rgb(191,22,22);
-$amarelo: rgb(255,108,0);
+$Rosa1: #fa005f;
+$RosaSombra: #DE003D;
+
+$Vermelho1: #F32E2E;
+$Vermelho2: #DF0F0F;
+$Vermelho3: #FDACA9;
+
+$Amarelo1: #fae900;
+$AmareloBalão: #FFBE00;
+
+$Laranja1: #F56800;
+$LaranjaSombra: #E86300;
+
+$Azul1: #00e0ff;
+$Azul2: #390be3;
+$Azul3: #11438a;
+$Azul4: #00418D;
+$AzulHover: #B6CAD8;
+
+$Verde2: #a1c21d;
+$Verde1: #92C400;
+
+$Preto: #000000;
+$Branco: #ffffff;
+$Cinza: #222222;
 // $larguraBarra: 65vw;
 $larguraBarra: 61%;
 $larguraFonte: 12px;
@@ -31,13 +50,10 @@ $larguraFonte: 12px;
             left: 25px;
             padding: 0 10px 2px 26px;
             border-radius: 15px 10px 10px 5px;
-            width: 40px;
-            height: 15px;
-            background-color: $branco;
-            text-align: center;
-            align-self: center;
-            font-family: Kalan-Regular;
-            font-size: $larguraFonte;
+            background-color: #ffffff;
+            font-family: Bonk;
+            font-size: 16px;
+            letter-spacing: 1px;
         }
     }
     .container__containerbarra{
@@ -54,19 +70,19 @@ $larguraFonte: 12px;
             margin: 20px auto ;
             width: $larguraBarra;
             height: 10px;
-            border: 2px solid $cinza;
+            border: 2px solid $Cinza;
             border-radius: 15px 15px 5px 5px;
-            background-color: $vermelho;
+            background-color: $Vermelho2;
 
             .container__containerbarra__vermenho__amarelo{
-                background-color: $amarelo;
+                background-color: $Laranja1;
                 width: 70%;
                 display: flex;
                 justify-content: center;
                 border-radius: 15px 15px 5px 5px;
 
                 .container__containerbarra__vermenho__amarelo__verde{
-                    background-color: $verde;
+                    background-color: $Verde1;
                     width: 50%;
                     border-radius: 15px 15px 5px 5px;
                     display: flex;
@@ -76,7 +92,7 @@ $larguraFonte: 12px;
 
             .container__containerbarra__indicador{
                 width: 5px;
-                background-color: $branco;
+                background-color: $Branco;
                 height: 15px;
                 border-radius: 5px;
                 position: relative;
@@ -128,15 +144,17 @@ $larguraFonte: 12px;
             z-index: -1;
             position: absolute;
             top: 12px;
-            padding: 0 26px 2px 10px;
+            left: -14px;
+            padding: 0 38px 2px 10px;
             border-radius: 15px 10px 10px 5px;
             width: 40px;
             height: 15px;
-            background-color: $branco;
+            background-color: #ffffff;
             text-align: center;
             align-self: center;
-            font-family: Kalan-Regular;
-            font-size: $larguraFonte;
+            font-family: Bonk;
+            font-size: 16px;
+            letter-spacing: 1px;
         }
     }
 

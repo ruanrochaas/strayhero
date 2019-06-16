@@ -1,10 +1,29 @@
-$preto: rgb(0, 0, 0);
-$branco: rgb(255, 255, 255);
-$cinza: rgb(34, 34, 34);
-$verde: rgb(72,219,66);
-$vermelho: rgb(191,22,22);
-$laranja: rgb(255,108,0);
-$pretoTraparente: rgba(0, 0, 0, 0.575);
+$Rosa1: #fa005f;
+$RosaSombra: #DE003D;
+
+$Vermelho1: #F32E2E;
+$Vermelho2: #DF0F0F;
+$Vermelho3: #FDACA9;
+
+$Amarelo1: #fae900;
+$AmareloBalão: #FFBE00;
+
+$Laranja1: #F56800;
+$LaranjaSombra: #E86300;
+
+$Azul1: #00e0ff;
+$Azul2: #390be3;
+$Azul3: #11438a;
+$Azul4: #00418D;
+$AzulHover: #B6CAD8;
+
+$Verde2: #a1c21d;
+$Verde1: #92C400;
+
+$Preto: #000000;
+$Branco: #ffffff;
+$Cinza: #222222;
+$pretoTraparente: #00000093;
 
 .container{
 
@@ -22,14 +41,16 @@ $pretoTraparente: rgba(0, 0, 0, 0.575);
         
         width: 70vw;
         height: 50vh;
-        background-color: $branco;
-        border-radius: 35px 20px;
+        background-color: #FFBE00;
+        border-radius: 35px 20px 10px 32px;
         overflow: auto;
+        box-shadow: 4px 5px 0px 0px $LaranjaSombra;
+        border: 3px solid $Laranja1;
 
         .container__modal__titulo{
             height: 20%;
-            background-color: $vermelho;
-            color: $branco;
+            // background-color: $Vermelho2;
+            color: $Azul4;
             width: 100%;
             height: 50px;
             border-radius: 35px 20px 0 0;
@@ -37,64 +58,65 @@ $pretoTraparente: rgba(0, 0, 0, 0.575);
             justify-content: center;
 
             .container__modal__titulo__texto{
-                font-family: Boogaloo;
+                font-family: Bonk;
                 font-size: 30px;
                 align-self: center;
+                letter-spacing: 1px
             }
         }
     
         .container__modal__corpo{
             height: 60%;
-            overflow: hidden;
-            justify-content: center;
+            overflow: scroll;
+            text-align: justify;
+            margin: 14px;
 
             .container__modal__corpo__texto{
-                font-family: Kalan-Regular;
+                font-family: Lato-Bold;
                 width: 100%;
                 margin: 60px 20px 20px 20px;
                 box-sizing: border-box;
                 text-align: justify;
+                color: $Azul4
             }
     
         }
 
         .container__modal__botoes{
-            height: 20%;
-            background-color: $branco;
-            width: 100%;
-            height: 55px;
-            border-radius: 0 0 35px 20px;
             display: flex;
             justify-content: center;
+            background-color: $AmareloBalão;
 
             .container__modal__botoes__ok{
                 border: 2px solid transparent;
                 border-radius: 15px 10px 20px 15px;
-                background-color: $vermelho;
+                background-color: $Vermelho2;
                 width: 65px;
                 height: 35px;
                 padding: 5px;
-                color: $branco;
-                font-family: Boogaloo;
+                color: $Branco;
+                font-family: Bonk;
                 font-size: 20px;
                 cursor: pointer;
-                margin: 10px;
+                margin: 0 auto;
                 outline:0;
+                letter-spacing: 1px
             }
 
             .container__modal__botoes__cancelar{
-                border: 2px solid $cinza;
+                border: 2px solid $Cinza;
                 border-radius: 15px 10px 20px 15px;
                 background-color: transparent;
                 width: 115px;
                 height: 35px;
                 padding: 5px;
-                color: $cinza;
-                font-family: Boogaloo;
+                color: $Cinza;
+                font-family: Bonk;
                 font-size: 20px;
                 cursor: pointer;
-                margin: 10px;
+                margin: 0 auto;
                 outline:0;
+                letter-spacing: 1px
             }
 
 
