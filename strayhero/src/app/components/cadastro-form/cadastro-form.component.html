@@ -9,7 +9,6 @@
   <div class="form__label">Repita a Senha</div><br>
   <input class="form__input {{cl_senha2}}" type="password" placeholder="Repita a senha" (focus)="cl_senha2 = ''" #pass2><br>
   <button class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(criarObj(email.value, username.value, pass1.value, pass2.value)); $event.preventDefault()">CADASTRAR</button>
-  <!-- [routerLink]="['/login']" routerLinkActive="router-link-active" -->  <!-- ALTERAR ISSO AQUI DEPOIS -->
   <button class="botao__secundario mt-20 mb-20" >CANCELAR</button>
 </form>
-<a [routerLink]="['/login']" routerLinkActive="router-link-active" >Já sou cadastrado!</a>
+<a [routerLink]="['/login']" routerLinkActive="router-link-active" >Já tenho cadastro!</a>
