@@ -97,7 +97,7 @@ $larguraFonte: 12px;
                 border-radius: 5px;
                 position: relative;
                 // O codigo abaixo pra mover o indicador so funciona do valor -25% até o valor 75% sendo 25% o valor equivalente ao centro, mas a barra é responsiva
-                left: calc(25% - #{$larguraBarra});
+                //left: calc(25% - #{$larguraBarra}); //   -80% -61% -36% -10% 8%
                 align-self: center;
             }
 
@@ -160,3 +160,22 @@ $larguraFonte: 12px;
 
 }
 
+.pessimo-esq{
+    left: -80%;
+}
+
+.ruim-esq{
+    left: -61%
+}
+
+.bom{
+    left: -36%;
+}
+
+.ruim-dir{
+    left: -10%
+}
+
+.pessimo-dir{
+    left: 8%;
+}

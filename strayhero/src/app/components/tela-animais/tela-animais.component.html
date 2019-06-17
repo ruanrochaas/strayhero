@@ -2,7 +2,7 @@
 
 <app-progresso-usuario></app-progresso-usuario>
 
-<app-feedback-acao-usuario></app-feedback-acao-usuario>
+<!-- <app-feedback-acao-usuario (click)="teste()"></app-feedback-acao-usuario> -->
 
 <app-moedas></app-moedas>
 
@@ -15,3 +15,4 @@
 <!-- <app-notificacao></app-notificacao> -->
 
 <!-- <app-modal-detalhes-animal></app-modal-detalhes-animal> -->
+<app-notificacao *ngIf="feedbackAtivo == true"></app-notificacao>

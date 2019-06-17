@@ -27,6 +27,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { ModalDetalhesAnimalComponent } from './components/modal-detalhes-animal/modal-detalhes-animal.component';
 import { TelaDoarParaOngComponent } from './components/tela-doar-para-ong/tela-doar-para-ong.component';
+import { PubSubModule } from 'angular7-pubsub';
+import { AnimalComponent } from './components/animal/animal.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,8 @@ import { TelaDoarParaOngComponent } from './components/tela-doar-para-ong/tela-d
     FeedbackAtencaoAnimalComponent,
     FeedbackAcaoUsuarioComponent,
     ModalDetalhesAnimalComponent,
-    TelaDoarParaOngComponent
+    TelaDoarParaOngComponent,
+    AnimalComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { TelaDoarParaOngComponent } from './components/tela-doar-para-ong/tela-d
     HttpClientModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    PubSubModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

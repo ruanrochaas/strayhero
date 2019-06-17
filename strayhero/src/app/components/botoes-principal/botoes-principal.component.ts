@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-botoes-principal',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotoesPrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private roteador: Router) { }
 
   ngOnInit() {
   }
 
+  logout(){
+    localStorage.removeItem("usuarioLogado");
+    this.roteador.navigate(["/login"]);
+  }
 }

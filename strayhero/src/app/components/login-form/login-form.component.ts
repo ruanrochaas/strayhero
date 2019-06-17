@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
-import { ValidacoesService } from 'src/app/services/validacoes.service';
 
 @Component({
   selector: 'app-login-form',
@@ -14,7 +13,12 @@ export class LoginFormComponent implements OnInit {
   cl_email: string = "";
   cl_pass: string = "";
 
-  constructor(private roteador: Router, private loginService: LoginService, private validacoesService: ValidacoesService) { }
+  constructor(private roteador: Router, private loginService: LoginService) {
+    let loggedUser = localStorage.getItem("usuarioLogado");
+    if (loggedUser){
+      this.roteador.navigate(["/index"]);
+    }
+  }
 
   ngOnInit() {
   }
@@ -23,7 +27,7 @@ export class LoginFormComponent implements OnInit {
     let obj = this.criarObj(email,pass);
     if(obj == null) return;//corrigir depois
     this.loginService.logar(obj).then((res)=>{
-      // localStorage.setItem("usuarioLogado",res._id);
+      localStorage.setItem("usuarioLogado",res["_id"]);
       this.roteador.navigate(["/index"]);
     }).catch((e)=>{
       this.feedbackErro(e);

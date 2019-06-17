@@ -1,0 +1,24 @@
+@keyframes anim{
+    from{
+        background-position: 0px;
+    }
+    to{
+        background-position: -350px;
+    }
+}
+
+.dog1{
+    background: url('../../../assets/animacoes/animação3-08.png');
+    width: 50px;
+    height: 50px;
+    animation: anim 3s steps(7) infinite;
+}
+
+.animal-container{
+    width: 0;
+    position: absolute;
+    bottom: 0px;
+
+    &__anim{
+    }
+}
