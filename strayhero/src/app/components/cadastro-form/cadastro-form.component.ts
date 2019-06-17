@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CadastroService } from '../../services/cadastro.service';
 import { ValidacoesService } from '../../services/validacoes.service';
 import { Router } from '@angular/router';
+import { AnimaisService } from 'src/app/services/animais.service';
 
 @Component({
   selector: 'app-cadastro-form',
@@ -18,8 +19,9 @@ export class CadastroFormComponent {
   cl_nome: string = "";
   cl_senha1: string = "";
   cl_senha2: string = "";
+  idAnimal: string;
 
-  public constructor(private roteador: Router, private cadastroService:CadastroService, private valicoesService:ValidacoesService){
+  public constructor(private roteador: Router, private cadastroService:CadastroService, private valicoesService:ValidacoesService, private animaisService: AnimaisService){
     let loggedUser = localStorage.getItem("usuarioLogado");
     if (loggedUser){
       this.roteador.navigate(["/index"]);
@@ -28,6 +30,8 @@ export class CadastroFormComponent {
 
   enviar(obj:any){
     if(obj == null) return;//corrigir depois
+    if(this.idAnimal != undefined) obj.animaisAdotados.push(this.idAnimal);
+    console.log(obj);
     this.cadastroService.cadastrar(obj).then((res)=>{
       //Chamar Modal aqui!
       this.roteador.navigate(["/login"]);
@@ -54,7 +58,7 @@ export class CadastroFormComponent {
               "email": email,
               "username": nome,
               "password": senha1,
-              "statusAmbiente": 50,
+              "statusAmbiente": -36,
               "nivel": 1,
               "pontuacao": 0,
               "dinheiro": 50

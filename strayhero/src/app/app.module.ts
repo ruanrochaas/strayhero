@@ -26,6 +26,7 @@ import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { PubSubModule } from 'angular7-pubsub';
+import { AnimalComponent } from './components/animal/animal.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { PubSubModule } from 'angular7-pubsub';
     CaixaDialogo2Component,
     LoginFormComponent,
     FeedbackAtencaoAnimalComponent,
-    FeedbackAcaoUsuarioComponent
+    FeedbackAcaoUsuarioComponent,
+    AnimalComponent
   ],
   imports: [
     BrowserModule,

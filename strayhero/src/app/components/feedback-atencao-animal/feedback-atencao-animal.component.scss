@@ -13,7 +13,7 @@ $laranja: rgb(255,108,0);
     height: 30px;
     position: relative;
     left: 50%;
-    transform: translate( -50% );
+    //transform: translate( -50% );
 
     .container__imagem{
         // width: 10px;
@@ -33,8 +33,4 @@ $laranja: rgb(255,108,0);
     bottom: -5px;  
     left: 50%;
     transform: translate( -50% );
-}
-
-.container:hover{
-    background-color: $laranja;
 }

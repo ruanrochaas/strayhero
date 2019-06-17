@@ -38,6 +38,7 @@ export class TelaAnimaisComponent implements OnInit {
     this.pubsub.$pub("atualizar-posicaoBarra", this.usuarioLogado.statusAmbiente);
     this.pubsub.$pub("atualizar-qtdmoedas", this.usuarioLogado.dinheiro);
     this.pubsub.$pub("feedback-titulo", {nivel:this.usuarioLogado.nivel, pontuacao:this.usuarioLogado.pontuacao});
+    this.pubsub.$pub("feedback-animais", this.usuarioLogado.animaisAdotados);
   }
 
   teste(){

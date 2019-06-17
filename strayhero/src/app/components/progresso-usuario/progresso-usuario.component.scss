@@ -57,48 +57,48 @@ $larguraProgresso: 75;
             font-family: Kalan-Regular;
             font-size: $larguraFonte;
         }
+        .zero{
+            width: 0%;
+        }
+        .dez{
+            width: 10%;
+        }
+        
+        .vinte{
+            width: 20%;
+        }
+        
+        .trinta{
+            width: 30%;
+        }
+        
+        .quarenta{
+            width: 40%;
+        }
+        
+        .cinquenta{
+            width: 50%;
+        }
+        
+        .sessenta{
+            width: 60%;
+        }
+        
+        .setenta{
+            width: 70%;
+        }
+        
+        .oitenta{
+            width: 80%;
+        }
+        
+        .noventa{
+            width: 90%;
+        }
+        
+        .cem{
+            width: 100%;
+        }
     }
 }
 
-.zero{
-    width: 0%;
-}
-.dez{
-    width: 10%;
-}
-
-.vinte{
-    width: 20%;
-}
-
-.trinta{
-    width: 30%;
-}
-
-.quarenta{
-    width: 40%;
-}
-
-.cinquenta{
-    width: 50%;
-}
-
-.sessenta{
-    width: 60%;
-}
-
-.setenta{
-    width: 70%;
-}
-
-.oitenta{
-    width: 80%;
-}
-
-.noventa{
-    width: 90%;
-}
-
-.cem{
-    width: 100%;
-}

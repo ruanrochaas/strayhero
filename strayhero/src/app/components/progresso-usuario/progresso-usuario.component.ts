@@ -18,7 +18,9 @@ export class ProgressoUsuarioComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.tituloSub = this.pubsub.$sub("feedback-titulo").subscribe((res)=>{
       this.verificarTitulo(res.nivel);
+      console.log(res.pontuacao);
       this.atualizarBarra(res.pontuacao);
+      console.log(this.feedbackBarra);
     });
   }
 
@@ -26,25 +28,25 @@ export class ProgressoUsuarioComponent implements OnInit, OnDestroy {
     if(nivel == 1){
       this.titulo = "Aprendiz";
     } else if(nivel == 2){
-      this.titulo = "Aprendiz";
+      this.titulo = "Cuidador";
     } else if(nivel == 3){
-      this.titulo = "Aprendiz";
+      this.titulo = "Defensor";
     } else if(nivel == 4){
-      this.titulo = "Aprendiz";
+      this.titulo = "Guardião";
     } else if(nivel == 5){
-      this.titulo = "Aprendiz";
+      this.titulo = "Herói";
     }
   }
 
   atualizarBarra(pontuacao){
-    if(pontuacao < 10){
+    if(pontuacao < 5){
       this.feedbackBarra = "zero";
     } else if(pontuacao <= 10){
       this.feedbackBarra = "dez";
     } else if(pontuacao <= 20){
       this.feedbackBarra = "vinte";
     } else if(pontuacao <= 30){
-      this.feedbackBarra = "trinta";
+      this.feedbackBarra = "trinta"; 
     } else if(pontuacao <= 40){
       this.feedbackBarra = "quarenta";
     } else if(pontuacao <= 50){
