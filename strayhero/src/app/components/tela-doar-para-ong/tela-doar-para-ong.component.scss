@@ -1,0 +1,128 @@
+$Rosa1: #fa005f;
+$RosaSombra: #DE003D;
+
+$Vermelho1: #F32E2E;
+$Vermelho2: rgb(224, 15, 15);
+$Vermelho3: #FDACA9;
+
+$Amarelo1: #fae900;
+$AmareloBalao: #FFBE00;
+
+$Laranja1: rgb(244, 102, 0);
+$LaranjaSombra: #E86300;
+
+$Azul1: #00e0ff;
+$Azul2: #390be3;
+$Azul3: #11438a;
+$Azul4: #00418D;
+$AzulHover: #B6CAD8;
+
+$Verde2: #a1c21d;
+$Verde1: rgb(145, 193, 0);
+
+$Preto: #000000;
+$Branco: #ffffff;
+$Cinza: #222222;
+$pretoTraparente: #00000093;
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #e5e5e5;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    // overflow: auto;
+
+    &__detalhes {
+        width: 100%;
+        height: 64%;
+        background-color: $Laranja1;
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        justify-content: space-between;
+
+        &__nome {
+            
+        width: 100%;
+        font-family: Bonk;
+        font-size: 30px;
+        text-align: center;
+        color: $Branco;;
+        letter-spacing: 2px;
+        margin: 20px auto
+        // height: 100%;
+
+        }
+
+        &__imagem {
+            
+        max-width: 70%;
+        max-height: 55%;
+        border: 6px solid $Azul1;
+        border-radius: 50px 20px 50px 20px;
+        box-shadow: 0px 6px $Azul2;
+
+        }
+
+        &__imagem2 {
+
+            width: 100%;
+            align-self: baseline;
+            // height: 100%;
+
+        }
+
+    }
+
+
+    &__botaoDoar {
+        color: $Azul2;
+        border-radius: 30px 30px 10px 30px;
+        height: 70px;
+        width: 220px;
+        font-size: 38px;
+        font-family: Bonk;
+        letter-spacing: 1px;
+        background-color: $Amarelo1;
+        border: 3px solid $Azul1;
+        box-shadow: 0px 4px $Azul2;
+        position: absolute;
+        top: 57%;
+        outline: 0;
+    }
+
+    &__descricao {
+
+        width: 80%;
+        height: 23%;
+        overflow: auto;
+        margin-top: 30px;
+        margin-bottom: 16px;
+
+        &__texto {
+
+            font-family: Lato-regular;
+            font-size: 19px;
+            text-align: center;
+            margin: 10px auto;
+        }
+    }
+
+    &__botaoVoltar {
+        color: white;
+        border-radius: 18px 15px 15px 7px;
+        height: 35px;
+        width: 100px;
+        font-size: 22px;
+        font-family: Bonk;
+        letter-spacing: 1px;
+        background-color: $Azul3;
+        border: 0px solid transparent;
+        outline: 0;
+    }
+
+
+
+}

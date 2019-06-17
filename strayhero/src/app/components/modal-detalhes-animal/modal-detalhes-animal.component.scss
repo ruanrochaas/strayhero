@@ -1,0 +1,198 @@
+$Rosa1: #fa005f;
+$RosaSombra: #DE003D;
+
+$Vermelho1: #F32E2E;
+$Vermelho2: rgb(224, 15, 15);
+$Vermelho3: #FDACA9;
+
+$Amarelo1: #fae900;
+$AmareloBalao: #FFBE00;
+
+$Laranja1: rgb(244, 102, 0);
+$LaranjaSombra: #E86300;
+
+$Azul1: #00e0ff;
+$Azul2: #390be3;
+$Azul3: #11438a;
+$Azul4: #00418D;
+$AzulHover: #B6CAD8;
+
+$Verde2: #a1c21d;
+$Verde1: rgb(145, 193, 0);
+
+$Preto: #000000;
+$Branco: #ffffff;
+$Cinza: #222222;
+$pretoTraparente: #00000093;
+
+.container {
+
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: $pretoTraparente;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    .container__modal {
+        
+        width: 70vw;
+        height: 60vh;
+        background-color: $Branco;
+        border-radius: 35px 35px 10px 32px;
+        overflow: auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        box-sizing: border-box;
+        // box-shadow: 4px 5px 0px 0px $LaranjaSombra;
+
+        &__imagem {
+            max-height: 140px;
+            max-width: 140px;
+            margin: 13px;
+        }
+
+        &__descricao {
+
+            width: 96%;
+            left: 47px;
+            height: 50vh;
+            background-color: $AmareloBalao;
+            border-radius: 35px 20px 10px 32px;
+            overflow: auto;
+            border: 5px solid $Laranja1;
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+
+            &__nome{
+                font-family: Bonk;
+                font-size: 40px;
+                color: $Azul4;
+                text-shadow: 0px 2px 0px #0000004f;
+                margin-top: 15px;
+                letter-spacing: 2px
+            }
+
+            &__status {
+                width: 100%;
+                height: 100%;
+
+                &__carinho {
+                    // border: 1px solid black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 13px auto;
+
+                    &__imagem {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    &__barra {
+
+                        width: 68%;
+                        height: 20px;
+                        border: 2px solid black;
+                        left: -20px;
+                        border-radius: 4px 11px 6px 8px;
+                        
+
+                        &__indicador {
+                            // essa variavel indica o progresso da barra
+                            --progresso: 90;
+                            width: calc(var(--progresso) * 1%);
+                            height: 91%;
+                            border-radius: 2px 9px 5px 6px;
+                            border: 1px solid black;
+                            // background-color: $Verde2;
+
+                            // isso aqui foi uma tentativa de fazer mudar de cor coforme abarra cresce mas eu não consigo deinar nas nossas cores
+                            // mude o valor da variavel "progresso" se quiser ver como fica
+
+                            // como não deu certo não botei nos outros
+
+                            // background-color: rgb( calc(var(--progresso) * 1), calc(var(--progresso) * -1.5), calc(var(--progresso) * 10));
+                            background-color: hsl( calc(var(--progresso) * 1) , 80%, 50%);
+                            
+                        }
+                    }
+
+                }
+                &__comida {
+                    // border: 1px solid black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 13px auto;
+
+                    &__imagem {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    &__barra {
+
+                        width: 68%;
+                        height: 20px;
+                        border: 2px solid black;
+                        left: -20px;
+                        border-radius: 4px 11px 6px 8px;
+
+                        &__indicador {
+                            background-color: $Laranja1;
+                            --progresso: 50;
+                            width: calc(var(--progresso) * 1%);
+                            height: 91%;
+                            border-radius: 2px 9px 5px 6px;
+                            border: 1px solid black;
+                        }
+                    }
+
+                }
+                &__saude {
+                    // border: 1px solid black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 13px auto;
+
+                    &__imagem {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    &__barra {
+
+                        width: 68%;
+                        height: 20px;
+                        border: 2px solid black;
+                        left: -20px;
+                        border-radius: 4px 11px 6px 8px;
+
+                        &__indicador {
+                            background-color: $Vermelho2;
+                            --progresso: 20;
+                            width: calc(var(--progresso) * 1%);
+                            height: 91%;
+                            border-radius: 2px 9px 5px 6px;
+                            border: 1px solid black;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        
+
+
+    }
+
+}

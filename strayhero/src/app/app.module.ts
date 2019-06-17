@@ -25,6 +25,8 @@ import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { ModalDetalhesAnimalComponent } from './components/modal-detalhes-animal/modal-detalhes-animal.component';
+import { TelaDoarParaOngComponent } from './components/tela-doar-para-ong/tela-doar-para-ong.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { environment } from '../environments/environment';
     CaixaDialogo2Component,
     LoginFormComponent,
     FeedbackAtencaoAnimalComponent,
-    FeedbackAcaoUsuarioComponent
+    FeedbackAcaoUsuarioComponent,
+    ModalDetalhesAnimalComponent,
+    TelaDoarParaOngComponent
   ],
   imports: [
     BrowserModule,
