@@ -25,6 +25,7 @@ import { FeedbackAcaoUsuarioComponent } from './components/feedback-acao-usuario
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { PubSubModule } from 'angular7-pubsub';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { environment } from '../environments/environment';
     HttpClientModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    PubSubModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

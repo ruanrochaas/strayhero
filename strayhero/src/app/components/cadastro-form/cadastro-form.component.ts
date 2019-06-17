@@ -19,7 +19,12 @@ export class CadastroFormComponent {
   cl_senha1: string = "";
   cl_senha2: string = "";
 
-  public constructor(private roteador: Router, private cadastroService:CadastroService, private valicoesService:ValidacoesService){}
+  public constructor(private roteador: Router, private cadastroService:CadastroService, private valicoesService:ValidacoesService){
+    let loggedUser = localStorage.getItem("usuarioLogado");
+    if (loggedUser){
+      this.roteador.navigate(["/index"]);
+    }
+  }
 
   enviar(obj:any){
     if(obj == null) return;//corrigir depois

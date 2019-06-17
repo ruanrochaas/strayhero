@@ -47,7 +47,7 @@ $larguraProgresso: 75;
 
         .container__barra__indicador{
             // aqui deve-se alterar o valor para mostrar o o progresso do usuario
-            width: 70%;
+            width: 50%;
             height: 13px;
             max-width: 100%;
             border-radius: 15px 10px 10px 5px;
@@ -58,4 +58,47 @@ $larguraProgresso: 75;
             font-size: $larguraFonte;
         }
     }
+}
+
+.zero{
+    width: 0%;
+}
+.dez{
+    width: 10%;
+}
+
+.vinte{
+    width: 20%;
+}
+
+.trinta{
+    width: 30%;
+}
+
+.quarenta{
+    width: 40%;
+}
+
+.cinquenta{
+    width: 50%;
+}
+
+.sessenta{
+    width: 60%;
+}
+
+.setenta{
+    width: 70%;
+}
+
+.oitenta{
+    width: 80%;
+}
+
+.noventa{
+    width: 90%;
+}
+
+.cem{
+    width: 100%;
 }
