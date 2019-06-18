@@ -13,4 +13,10 @@ export class UsuarioService {
     let novaUrl = this.url + id;
     return this.http.get(novaUrl).toPromise();
   }
+
+  atualizarUsuario(obj:any){
+    let novaUrl = this.url + obj["_id"];
+    console.log(novaUrl);
+    return this.http.put(novaUrl, obj).toPromise();
+  }
 }

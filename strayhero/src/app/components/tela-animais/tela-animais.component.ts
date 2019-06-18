@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Router } from '@angular/router';
 import { PubSubService } from 'angular7-pubsub';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tela-animais',
@@ -13,6 +14,7 @@ export class TelaAnimaisComponent implements OnInit {
   feedbackAtivo = false;
   usuarioLogado: any;
   idUsuarioLogado: string;
+  atualizarUsuarioSub: Subscription;
 
   constructor(private usuarioService: UsuarioService, private roteador: Router, private pubsub: PubSubService) {}
 
@@ -22,6 +24,9 @@ export class TelaAnimaisComponent implements OnInit {
       this.roteador.navigate(["/login"]);
     } else {
       this.recuperarUsuarioLogado();
+      this.atualizarUsuarioSub = this.pubsub.$sub("atualizar-usuario").subscribe((res)=>{
+        this.usuarioLogado = res;
+      })
     }
   }
 

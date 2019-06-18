@@ -40,7 +40,7 @@ $pretoTraparente: #00000093;
     .container__modal {
         
         width: 70vw;
-        height: 60vh;
+        height: 68vh;
         background-color: $Branco;
         border-radius: 35px 35px 10px 32px;
         overflow: auto;
@@ -72,6 +72,7 @@ $pretoTraparente: #00000093;
             &__nome{
                 font-family: Bonk;
                 font-size: 40px;
+                text-transform: uppercase;
                 color: $Azul4;
                 text-shadow: 0px 2px 0px #0000004f;
                 margin-top: 15px;
@@ -110,7 +111,7 @@ $pretoTraparente: #00000093;
                             height: 91%;
                             border-radius: 2px 9px 5px 6px;
                             border: 1px solid black;
-                            // background-color: $Verde2;
+                            background-color: $Verde2;
 
                             // isso aqui foi uma tentativa de fazer mudar de cor coforme abarra cresce mas eu não consigo deinar nas nossas cores
                             // mude o valor da variavel "progresso" se quiser ver como fica
@@ -118,8 +119,61 @@ $pretoTraparente: #00000093;
                             // como não deu certo não botei nos outros
 
                             // background-color: rgb( calc(var(--progresso) * 1), calc(var(--progresso) * -1.5), calc(var(--progresso) * 10));
-                            background-color: hsl( calc(var(--progresso) * 1) , 80%, 50%);
+                            //background-color: hsl( calc(var(--progresso) * 1) , 80%, 50%);
                             
+                        }
+                        .zero{
+                            --progresso: 0;
+                            background-color: $Vermelho2;
+                        }
+                        .dez{
+                            --progresso: 10;
+                            background-color: $Vermelho2;
+                        }
+                        
+                        .vinte{
+                            --progresso: 20;
+                            background-color: $Vermelho2;
+                        }
+                        
+                        .trinta{
+                            --progresso: 30;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .quarenta{
+                            --progresso: 40;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .cinquenta{
+                            --progresso: 50;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .sessenta{
+                            --progresso: 60;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .setenta{
+                            --progresso: 70;
+                            background-color: $Verde2;
+                        }
+                        
+                        .oitenta{
+                            --progresso: 80;
+                            background-color: $Verde2;
+                        }
+                        
+                        .noventa{
+                            --progresso: 90;
+                            background-color: $Verde2;
+                        }
+                        
+                        .cem{
+                            --progresso: 100;
+                            background-color: $Verde2;
                         }
                     }
 
@@ -152,6 +206,59 @@ $pretoTraparente: #00000093;
                             border-radius: 2px 9px 5px 6px;
                             border: 1px solid black;
                         }
+                        .zero{
+                            --progresso: 0;
+                            background-color: $Vermelho2;
+                        }
+                        .dez{
+                            --progresso: 10;
+                            background-color: $Vermelho2;
+                        }
+                        
+                        .vinte{
+                            --progresso: 20;
+                            background-color: $Vermelho2;
+                        }
+                        
+                        .trinta{
+                            --progresso: 30;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .quarenta{
+                            --progresso: 40;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .cinquenta{
+                            --progresso: 50;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .sessenta{
+                            --progresso: 60;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .setenta{
+                            --progresso: 70;
+                            background-color: $Verde2;
+                        }
+                        
+                        .oitenta{
+                            --progresso: 80;
+                            background-color: $Verde2;
+                        }
+                        
+                        .noventa{
+                            --progresso: 90;
+                            background-color: $Verde2;
+                        }
+                        
+                        .cem{
+                            --progresso: 100;
+                            background-color: $Verde2;
+                        }
                     }
 
                 }
@@ -183,16 +290,62 @@ $pretoTraparente: #00000093;
                             border-radius: 2px 9px 5px 6px;
                             border: 1px solid black;
                         }
+                        .zero{
+                            --progresso: 0;
+                            background-color: $Vermelho2;
+                        }
+                        .dez{
+                            --progresso: 10;
+                            background-color: $Vermelho2;
+                        }
+                        
+                        .vinte{
+                            --progresso: 20;
+                            background-color: $Vermelho2;
+                        }
+                        
+                        .trinta{
+                            --progresso: 30;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .quarenta{
+                            --progresso: 40;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .cinquenta{
+                            --progresso: 50;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .sessenta{
+                            --progresso: 60;
+                            background-color: $Laranja1;
+                        }
+                        
+                        .setenta{
+                            --progresso: 70;
+                            background-color: $Verde2;
+                        }
+                        
+                        .oitenta{
+                            --progresso: 80;
+                            background-color: $Verde2;
+                        }
+                        
+                        .noventa{
+                            --progresso: 90;
+                            background-color: $Verde2;
+                        }
+                        
+                        .cem{
+                            --progresso: 100;
+                            background-color: $Verde2;
+                        }
                     }
-
                 }
             }
-
         }
-
-        
-
-
     }
-
 }

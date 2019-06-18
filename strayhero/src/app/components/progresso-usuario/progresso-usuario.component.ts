@@ -18,9 +18,7 @@ export class ProgressoUsuarioComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.tituloSub = this.pubsub.$sub("feedback-titulo").subscribe((res)=>{
       this.verificarTitulo(res.nivel);
-      console.log(res.pontuacao);
       this.atualizarBarra(res.pontuacao);
-      console.log(this.feedbackBarra);
     });
   }
 

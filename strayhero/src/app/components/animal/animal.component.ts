@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { PubSubService } from 'angular7-pubsub';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-animal',
@@ -12,23 +13,24 @@ export class AnimalComponent implements OnInit, OnDestroy {
   @Input() idAni: string;
   renderizado = false;
   animalSub: Subscription;
+  apagarAnimais: Subscription;
   animal: any;
   nome = "";
 
-  constructor(private pubsub: PubSubService) { }
+  constructor(private pubsub: PubSubService, private roteador: Router) { }
 
   ngOnInit() {
     this.animalSub = this.pubsub.$sub("render-animal").subscribe((res)=>{
       if(this.idAni == res.idAni){
-        this.renderizado = true;
         this.animal = res.animalObj;
         this.nome = this.animal.nome;
+        this.renderizado = true;
       }
     });
   }
 
   abrirTelaAni(){
-    alert("Modal: Tela do Animal.")
+    this.pubsub.$pub("modal-animal", this.animal);
   }
 
   ngOnDestroy(){
