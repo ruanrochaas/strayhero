@@ -29,6 +29,7 @@ import { ModalDetalhesAnimalComponent } from './components/modal-detalhes-animal
 import { TelaDoarParaOngComponent } from './components/tela-doar-para-ong/tela-doar-para-ong.component';
 import { PubSubModule } from 'angular7-pubsub';
 import { AnimalComponent } from './components/animal/animal.component';
+import { TelaInicioComponent } from './components/tela-inicio/tela-inicio.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { AnimalComponent } from './components/animal/animal.component';
     FeedbackAcaoUsuarioComponent,
     ModalDetalhesAnimalComponent,
     TelaDoarParaOngComponent,
-    AnimalComponent
+    AnimalComponent,
+    TelaInicioComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,136 @@
+$Rosa1: #fa005f;
+$RosaSombra: #DE003D;
+
+$Vermelho1: #F32E2E;
+$Vermelho2: #DF0F0F;
+$Vermelho3: #FDACA9;
+
+$Amarelo1: #fae900;
+$AmareloBalão: #FFBE00;
+
+$Laranja1: #F56800;
+$LaranjaSombra: #E86300;
+
+$Azul1: #00e0ff;
+$Azul2: #390be3;
+$Azul3: #11438a;
+$AzulHover: #B6CAD8;
+
+$Verde2: #a1c21d;
+$Verde1: #92C400;
+
+$Preto: #000000;
+$Branco: #ffffff;
+$Cinza: #222222;
+
+@keyframes animacao-inicio{
+
+    0% {
+
+        background-image: url('../../../assets/animação-inicio/0.png');
+            
+    }
+
+    20% {
+
+        background-image: url('../../../assets/animação-inicio/1.png');
+        
+    }
+
+    30% {
+
+        background-image: url('../../../assets/animação-inicio/prototipo-inicio.png');
+        
+    }
+    70% {
+
+        background-image: url('../../../assets/animação-inicio/prototipo-inicio.png');
+        
+    }
+    80% {
+
+        background-image: url('../../../assets/animação-inicio/3.png');
+            
+    }
+
+    100% {
+        background-image: url('../../../assets/animação-inicio/4.png');
+        
+    }
+
+}
+
+// @keyframes animacao-fim{
+
+//     0% {
+
+//         background-image: url('../../../assets/animação-inicio/3.png');
+            
+//     }
+//     100% {
+//         background-image: url('../../../assets/animação-inicio/4.png');
+        
+//     }
+
+// }
+
+// @keyframes animacao-botao{
+
+//     0% {
+//         // display: none;
+//     }
+//     50% {
+//         // display: none;
+//     }
+//     100% {
+//         // display: inline-block;
+//         visibility: visible;
+//     }
+
+// }
+
+.container{
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: &$Branco;
+    background-size: 100% 100%;
+    
+
+    &__imagem{
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        animation: animacao-inicio 10s linear;
+        background-image: url('../../../assets/animação-inicio/4.png');
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        &__botao {
+            width: 68%;
+            height: 12%;
+            position: absolute;
+            border: 2px solid transparent;
+            border-radius: 20px 20px 20px 9px;
+            background-color: $Rosa1;
+            padding: 5px 15px;
+            color: white;
+            font-family: Bonk;
+            font-size: 30px;
+            cursor: pointer;
+            outline:0;
+            box-shadow: 1px 4px 0px 0px $RosaSombra;
+            letter-spacing: 1px;
+            bottom: 8%;
+        }
+    }
+
+    // .depois{
+    //     animation: animacao-fim 4s linear; 
+
+    // }
+    
+
+}
+
