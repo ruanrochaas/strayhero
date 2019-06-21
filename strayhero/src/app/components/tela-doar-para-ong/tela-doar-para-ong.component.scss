@@ -25,6 +25,24 @@ $Branco: #ffffff;
 $Cinza: #222222;
 $pretoTraparente: #00000093;
 
+@keyframes animacao-foco{
+    0% {
+        transform: scale(1.05);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -36,7 +54,7 @@ $pretoTraparente: #00000093;
 
     &__detalhes {
         width: 100%;
-        height: 64%;
+        height: 58%;
         background-color: $Laranja1;
         display: flex;
         align-items: center;
@@ -91,6 +109,7 @@ $pretoTraparente: #00000093;
         position: absolute;
         top: 57%;
         outline: 0;
+        animation: animacao-foco 2s infinite linear;
     }
 
     &__descricao {
@@ -98,8 +117,8 @@ $pretoTraparente: #00000093;
         width: 80%;
         height: 23%;
         overflow: auto;
-        margin-top: 30px;
-        margin-bottom: 16px;
+        margin-top: 67px;
+        margin-bottom: 0px;
 
         &__texto {
 

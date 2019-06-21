@@ -59,6 +59,8 @@ export class ProgressoUsuarioComponent implements OnInit, OnDestroy {
       this.feedbackBarra = "noventa";
     } else if(pontuacao <= 100){
       this.feedbackBarra = "cem";
+    } else if(pontuacao > 100){
+      alert("Parabéns, você passou de nível");
     }
   }
  

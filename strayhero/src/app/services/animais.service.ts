@@ -17,4 +17,9 @@ export class AnimaisService {
   criarAnimal(obj){
     return this.http.post(this.url,obj).toPromise();
   }
+
+  atualizarAnimal(obj){
+    let novaUrl = this.url + obj["_id"];
+    return this.http.put(novaUrl, obj).toPromise();
+  }
 }

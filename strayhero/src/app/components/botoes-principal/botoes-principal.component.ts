@@ -17,4 +17,8 @@ export class BotoesPrincipalComponent implements OnInit {
     localStorage.removeItem("usuarioLogado");
     this.roteador.navigate(["/login"]);
   }
+
+  funcaoNaoImple(){
+    alert("Modal: Função em construção. :)");
+  }
 }

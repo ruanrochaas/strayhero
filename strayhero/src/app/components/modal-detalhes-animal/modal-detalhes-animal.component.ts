@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PubSubService } from 'angular7-pubsub';
 import { Subscription } from 'rxjs';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { AnimaisService } from 'src/app/services/animais.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-modal-detalhes-animal',
@@ -20,14 +22,13 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
   statusComida = "";
   statusSaude = "";
 
-  constructor(private pubsub: PubSubService, private usuarioService: UsuarioService) { }
+  constructor(private pubsub: PubSubService, private usuarioService: UsuarioService, private animaisService: AnimaisService, private router: Router) { }
 
   ngOnInit() {
     this.animalSub = this.pubsub.$sub("modal-animal").subscribe((res)=>{
       this.animal = res;
       this.nome = res.nome;
       this.recuperarUsuario();
-      //console.log(this.animal);
       this.feedbackBarras();
       this.aberto = true;
     })
@@ -37,6 +38,7 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
     if(this.animal.statusAtencao < 100){
       this.animal.statusAtencao += 10;
       this.animal.dataAtencao = Date.now();
+      this.dono.pontuacao += 1;
     } else if(this.animal.statusAtencao = 100){
       this.animal.statusAtencao = 100;
     }
@@ -49,7 +51,11 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
         this.animal.statusComida += 10;
         this.animal.dataComida = Date.now();
         this.dono.dinheiro -= this.valorCuidado;
-        console.log(this.dono.dinheiro);
+        this.dono.pontuacao += 5;
+      } else {
+        this.atualizarAnimal();
+        this.atualizarUsuario();
+        this.router.navigate(["/doacao"],{ state: this.dono});
       }
     } else if(this.animal.statusComida = 100){
       this.animal.statusComida = 100;
@@ -63,7 +69,11 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
         this.animal.statusSaude += 10;
         this.animal.dataSaude = Date.now();
         this.dono.dinheiro -= this.valorCuidado;
-        console.log(this.dono.dinheiro);
+        this.dono.pontuacao += 5;
+      } else {
+        this.atualizarAnimal();
+        this.atualizarUsuario();
+        this.router.navigate(["/doacao"],{ state: this.dono});
       }
     } else if(this.animal.statusSaude = 100){
       this.animal.statusSaude = 100;
@@ -113,11 +123,8 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
 
   fecharModal(elem){
     if(event.target == elem){
-      this.usuarioService.atualizarUsuario(this.dono).then((res)=>{
-        console.log("Usuario atualizado com sucesso!")
-      }).catch((e)=>{
-        console.log(e);
-      });
+      this.atualizarUsuario();
+      this.atualizarAnimal();
       this.pubsub.$pub("atualizar-usuario", this.dono);
       this.pubsub.$pub("atualizar-posicaoBarra", this.dono.statusAmbiente);
       this.pubsub.$pub("atualizar-qtdmoedas", this.dono.dinheiro);
@@ -130,6 +137,22 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
       this.statusSaude = "";
       this.aberto = false;
     }
+  }
+
+  atualizarUsuario(){
+    this.usuarioService.atualizarUsuario(this.dono).then((res)=>{
+      console.log("Usuario atualizado com sucesso!");
+    }).catch((e)=>{
+      console.log(e);
+    });
+  }
+
+  atualizarAnimal(){
+    this.animaisService.atualizarAnimal(this.animal).then((res)=>{
+      console.log("Animal atualizado com sucesso!");
+    }).catch((e)=>{
+      console.log(e);
+    });
   }
 
   ngOnDestroy(){
