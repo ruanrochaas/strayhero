@@ -25,6 +25,27 @@ $Branco: #ffffff;
 $Cinza: #222222;
 $pretoTraparente: #00000093;
 
+@keyframes feedbackInteragir{
+    0%{
+        transform: scale(1);
+    }
+    40%{
+        transform: scale(1);
+    }
+    60%{
+        transform: scale(1.1);
+    }
+    80%{
+        transform: scale(1);
+    }
+    90%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 .container {
 
     z-index: 1;
@@ -89,6 +110,10 @@ $pretoTraparente: #00000093;
                     align-items: center;
                     justify-content: center;
                     margin: 13px auto;
+
+                    .feedback-interagir{
+                        animation: feedbackInteragir 1s infinite;
+                    }
 
                     &__imagem {
                         width: 50px;
@@ -185,6 +210,10 @@ $pretoTraparente: #00000093;
                     justify-content: center;
                     margin: 13px auto;
 
+                    .feedback-interagir{
+                        animation: feedbackInteragir 1s infinite;
+                    }
+
                     &__imagem {
                         width: 50px;
                         height: 50px;
@@ -268,6 +297,10 @@ $pretoTraparente: #00000093;
                     align-items: center;
                     justify-content: center;
                     margin: 13px auto;
+
+                    .feedback-interagir{
+                        animation: feedbackInteragir 1s infinite;
+                    }
 
                     &__imagem {
                         width: 50px;

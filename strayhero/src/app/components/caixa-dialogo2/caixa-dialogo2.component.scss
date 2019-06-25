@@ -14,16 +14,16 @@
 }
 
 .dialogo1{
-    width: 330px;
+    width: 90%;
     height: 90px;
     margin: auto;
+    position: relative;
 
     .dialogo1__img{
         position: absolute;
         width: 85px;
         z-index: 2;
-        transform: translateX(250px);
-        animation: animacao-dialogo1 2s infinite;
+        right: 0;
     }
 
     .dialogo1__textcontainer{

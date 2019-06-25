@@ -28,7 +28,7 @@ export class LoginFormComponent implements OnInit {
     if(obj == null) return;//corrigir depois
     this.loginService.logar(obj).then((res)=>{
       localStorage.setItem("usuarioLogado",res["_id"]);
-      this.roteador.navigate(["/index"]);
+      this.roteador.navigate(["/inicio"]);
     }).catch((e)=>{
       this.feedbackErro(e);
     });

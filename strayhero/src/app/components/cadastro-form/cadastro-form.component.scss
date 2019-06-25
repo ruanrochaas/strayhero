@@ -77,6 +77,14 @@ $Cinza: #222222;
 }
 
 .form{
+    width: 86%;
+    background-color: #f2f2f2;
+    border: 5px solid $Laranja1;
+    border-radius: 30px 25px 10px 50px;
+    text-align: center;
+    margin: 30px auto;
+    box-shadow: 1px 4px 0px 0px $LaranjaSombra;
+    padding-bottom: 10px;
 
     .invisivel{
         display: none;
@@ -91,7 +99,7 @@ $Cinza: #222222;
     }
     
     .mb-20{
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     
     .ml-10{
@@ -125,15 +133,6 @@ $Cinza: #222222;
       box-shadow: 1px 4px 0px 0px $RosaSombra;
       letter-spacing: 1px;
     }
-
-
-    width: 80%;
-    background-color: #f2f2f2;
-    border: 5px solid $Laranja1;
-    border-radius: 30px 25px 10px 50px;
-    text-align: center;
-    margin: 15px auto;
-    box-shadow: 1px 4px 0px 0px $LaranjaSombra;
 
 
     .form__input{
@@ -191,7 +190,7 @@ $Cinza: #222222;
         letter-spacing: 1px;
         font-size: 15px;
         letter-spacing: 1px;
-        color: $Preto
+        color: $Preto;
     }
 
 }

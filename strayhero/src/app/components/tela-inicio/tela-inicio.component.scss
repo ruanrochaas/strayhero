@@ -31,23 +31,23 @@ $Cinza: #222222;
             
     }
 
-    20% {
+    15% {
 
         background-image: url('../../../assets/animação-inicio/1.png');
         
     }
 
-    30% {
+    25% {
 
         background-image: url('../../../assets/animação-inicio/prototipo-inicio.png');
         
     }
-    70% {
+    75% {
 
         background-image: url('../../../assets/animação-inicio/prototipo-inicio.png');
-        
+    
     }
-    80% {
+    90% {
 
         background-image: url('../../../assets/animação-inicio/3.png');
             
@@ -60,34 +60,33 @@ $Cinza: #222222;
 
 }
 
-// @keyframes animacao-fim{
-
-//     0% {
-
-//         background-image: url('../../../assets/animação-inicio/3.png');
-            
-//     }
-//     100% {
-//         background-image: url('../../../assets/animação-inicio/4.png');
-        
-//     }
-
-// }
-
-// @keyframes animacao-botao{
-
-//     0% {
-//         // display: none;
-//     }
-//     50% {
-//         // display: none;
-//     }
-//     100% {
-//         // display: inline-block;
-//         visibility: visible;
-//     }
-
-// }
+@keyframes botao{
+    0%{
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+    }
+    70%{
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+    }
+    75%{
+        display: block;
+        visibility: visible;
+        opacity: 0;
+    }
+    80%{
+        display: block;
+        visibility: visible;
+        opacity: 0;
+    }
+    100%{
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
 
 .container{
     
@@ -123,14 +122,8 @@ $Cinza: #222222;
             box-shadow: 1px 4px 0px 0px $RosaSombra;
             letter-spacing: 1px;
             bottom: 8%;
+            animation: botao 10s linear;
         }
     }
-
-    // .depois{
-    //     animation: animacao-fim 4s linear; 
-
-    // }
-    
-
 }
 

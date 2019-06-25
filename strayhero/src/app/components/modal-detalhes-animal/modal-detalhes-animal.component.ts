@@ -21,6 +21,10 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
   statusAtencao = "";
   statusComida = "";
   statusSaude = "";
+  animacao = "Animadog5sadddddteste.gif";
+  feedbackInteragirCarinho = "";
+  feedbackInteragirComida = "";
+  feedbackInteragirSaude = "";
 
   constructor(private pubsub: PubSubService, private usuarioService: UsuarioService, private animaisService: AnimaisService, private router: Router) { }
 
@@ -30,13 +34,17 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
       this.nome = res.nome;
       this.recuperarUsuario();
       this.feedbackBarras();
+      this.atualizarAnimacao();
+      this.feedbackClickParaInteragir();
       this.aberto = true;
     })
   }
 
   darAmor(){
     if(this.animal.statusAtencao < 100){
+      this.animacaoAmor();
       this.animal.statusAtencao += 10;
+      this.feedbackClickParaInteragir();
       this.animal.dataAtencao = Date.now();
       this.dono.pontuacao += 1;
     } else if(this.animal.statusAtencao = 100){
@@ -48,7 +56,9 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
   alimentar(){
     if(this.animal.statusComida < 100){
       if(this.dono.dinheiro >= this.valorCuidado){
+        this.animacaoAlimento();
         this.animal.statusComida += 10;
+        this.feedbackClickParaInteragir();
         this.animal.dataComida = Date.now();
         this.dono.dinheiro -= this.valorCuidado;
         this.dono.pontuacao += 5;
@@ -66,7 +76,9 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
   darRemedio(){
     if(this.animal.statusSaude < 100){
       if(this.dono.dinheiro >= this.valorCuidado){
+        this.animacaoRemedio();
         this.animal.statusSaude += 10;
+        this.feedbackClickParaInteragir();
         this.animal.dataSaude = Date.now();
         this.dono.dinheiro -= this.valorCuidado;
         this.dono.pontuacao += 5;
@@ -153,6 +165,53 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
     }).catch((e)=>{
       console.log(e);
     });
+  }
+
+  atualizarAnimacao(){
+    if(this.animal.statusComida < 50 || this.animal.statusSaude < 50 || this.animal.statusAtencao < 50){
+      this.animacao = "Animadog5sadddddteste.gif";
+    } else {
+      this.animacao = "Animadog1teste.gif";
+    }
+  }
+
+  animacaoAmor(){
+    this.animacao = "Animadog2Carinhoteste.gif";
+    setTimeout(() => {
+      this.atualizarAnimacao();
+    }, 2000);
+  }
+
+  animacaoAlimento(){
+    this.animacao = "Animadog3foodiiiiiteste.gif";
+    setTimeout(() => {
+      this.atualizarAnimacao();
+    }, 2000);
+  }
+
+  animacaoRemedio(){
+    this.animacao = "Animadog1susteste.gif";
+    setTimeout(() => {
+      this.atualizarAnimacao();
+    }, 2000);
+  }
+
+  feedbackClickParaInteragir(){
+    if(this.animal.statusComida < 50){
+      this.feedbackInteragirComida = "feedback-interagir";
+    } else {
+      this.feedbackInteragirComida = "";
+    }
+    if(this.animal.statusSaude < 50){
+      this.feedbackInteragirSaude = "feedback-interagir";
+    } else {
+      this.feedbackInteragirSaude = "";
+    }
+    if(this.animal.statusAtencao < 50){
+      this.feedbackInteragirCarinho = "feedback-interagir";
+    } else {
+      this.feedbackInteragirCarinho = "";
+    }
   }
 
   ngOnDestroy(){

@@ -1,24 +1,24 @@
 <div class="container" *ngIf="aberto" (click)="fecharModal(overlay)" #overlay>
   <div class="container__modal">
-    <img src="../../../assets/animacoes/animação3.gif" alt="" class="container__modal__imagem">
+    <img src="../../../assets/animacoes/{{animacao}}" alt="" class="container__modal__imagem">
     <!-- <br> -->
     <div class="container__modal__descricao"> 
       <span class="container__modal__descricao__nome">{{nome}}</span>
       <div class="container__modal__descricao__status">
         <div class="container__modal__descricao__status__carinho">
-          <img src="../../../assets/coracao-level.png" alt="" class="container__modal__descricao__status__carinho__imagem" (click)="darAmor()">
+          <img src="../../../assets/coracao-level.png" alt="" class="container__modal__descricao__status__carinho__imagem {{feedbackInteragirCarinho}}" (click)="darAmor()">
           <div class="container__modal__descricao__status__carinho__barra">
             <div class="container__modal__descricao__status__carinho__barra__indicador {{statusAtencao}}"></div>
           </div>
         </div>
         <div class="container__modal__descricao__status__comida">
-            <img src="../../../assets/comida-level.png" alt="" class="container__modal__descricao__status__comida__imagem" (click)="alimentar()">
+            <img src="../../../assets/comida-level.png" alt="" class="container__modal__descricao__status__comida__imagem {{feedbackInteragirComida}}" (click)="alimentar()">
             <div class="container__modal__descricao__status__comida__barra">
                 <div class="container__modal__descricao__status__comida__barra__indicador {{statusComida}}"></div>
             </div>
         </div>
         <div class="container__modal__descricao__status__saude">
-            <img src="../../../assets/saude-level.png" alt="" class="container__modal__descricao__status__saude__imagem" (click)="darRemedio()">
+            <img src="../../../assets/saude-level.png" alt="" class="container__modal__descricao__status__saude__imagem {{feedbackInteragirSaude}}" (click)="darRemedio()">
             <div class="container__modal__descricao__status__saude__barra">
                 <div class="container__modal__descricao__status__saude__barra__indicador {{statusSaude}}"></div>
             </div>

@@ -7,5 +7,5 @@
   <button class="botao__primario mr-10 mt-20 mb-20" (click)="enviar(email.value,pass.value); $event.preventDefault()">ENTRAR</button>
   <button class="botao__secundario mt-20 mb-20">CANCELAR</button>
   <br>
-  <a class="form__botao__esqueciSenha" [routerLink]="" routerLinkActive="router-link-active" >ESQUECI MINHA SENHA</a>
+  <a class="form__botao__esqueciSenha" [routerLink]="['/cadastro']" routerLinkActive="router-link-active" >NAO TENHO CADASTRO</a>
 </form>
