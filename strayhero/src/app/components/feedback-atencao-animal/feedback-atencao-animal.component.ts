@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-feedback-atencao-animal',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./feedback-atencao-animal.component.scss']
 })
 export class FeedbackAtencaoAnimalComponent implements OnInit {
+
+  @Input() imagem;
 
   constructor() { }
 

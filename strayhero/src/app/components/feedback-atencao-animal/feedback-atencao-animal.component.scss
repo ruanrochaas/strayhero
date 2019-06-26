@@ -5,6 +5,27 @@ $verde: rgb(72,219,66);
 $vermelho: rgb(191,22,22);
 $laranja: rgb(255,108,0);
 
+@keyframes anim-rot-img{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(12deg);
+    }
+    100%{
+        transform: rotate(-12deg);
+    }
+}
+
+@keyframes anim-sca-cont{
+    0%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+}
+
 .container{
     
     background: $branco;
@@ -13,12 +34,12 @@ $laranja: rgb(255,108,0);
     height: 30px;
     position: relative;
     left: 50%;
-    //transform: translate( -50% );
+    animation: anim-sca-cont 1s infinite;
 
     .container__imagem{
-        // width: 10px;
-        // height: 10px;
-
+        width: 27px;
+        height: 27px;
+        animation: anim-rot-img 1s infinite;
     }
 }
 

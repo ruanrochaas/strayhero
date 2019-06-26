@@ -141,6 +141,7 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
       this.pubsub.$pub("atualizar-posicaoBarra", this.dono.statusAmbiente);
       this.pubsub.$pub("atualizar-qtdmoedas", this.dono.dinheiro);
       this.pubsub.$pub("feedback-titulo", {nivel:this.dono.nivel, pontuacao:this.dono.pontuacao});
+      this.pubsub.$pub("mudar-anim-animal");
       this.animal = undefined;
       this.dono = undefined;
       this.nome = "Doguinho";
