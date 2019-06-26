@@ -14,6 +14,7 @@ export class AnimalComponent implements OnInit, OnDestroy {
   @Input() idAni: string;
   renderizado = false;
   animalSub: Subscription;
+  sumirSub: Subscription;
   apagarAnimais: Subscription;
   mudarFeedbackAnimacao: Subscription;
   animal: any;
@@ -36,14 +37,20 @@ export class AnimalComponent implements OnInit, OnDestroy {
       }
     });
     this.mudarFeedbackAnimacao = this.pubsub.$sub("mudar-anim-animal").subscribe((res)=>{
-      this.mudarAnimacao();
-      this.mudarBaloes();
-      this.atualizarNecessidades();
+      if(this.idAni == res.idAni){
+        this.animal = res.animal;
+        this.mudarAnimacao();
+        this.mudarBaloes();
+        this.atualizarNecessidades();
+      }
     });
+    this.sumirSub = this.pubsub.$sub("sumir-animais").subscribe((res)=>{
+      this.animal = undefined;
+    })
   }
 
   abrirTelaAni(){
-    this.pubsub.$pub("modal-animal", this.animal);
+    this.pubsub.$pub("modal-animal", {animal:this.animal,idAni:this.idAni});
   }
 
   mudarBaloes(){

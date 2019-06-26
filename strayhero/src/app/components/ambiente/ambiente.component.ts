@@ -36,6 +36,7 @@ export class AmbienteComponent implements OnInit, OnDestroy {
   }
 
   mostrarAnimais(){
+    this.pubsub.$pub("sumir-animais");
     for(let animal of this.animais){
       if(this.posicoesDesocupadas.length != 0){
         let index = Math.floor(Math.random()*(this.posicoesDesocupadas.length - 1)); //tem alguma coisa estranha aqui...

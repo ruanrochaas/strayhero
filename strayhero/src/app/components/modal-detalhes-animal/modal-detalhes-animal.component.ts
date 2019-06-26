@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
 
   animal: any;
+  idAni: "";
   dono: any;
   animalSub: Subscription;
   aberto = false;
@@ -30,8 +31,9 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.animalSub = this.pubsub.$sub("modal-animal").subscribe((res)=>{
-      this.animal = res;
-      this.nome = res.nome;
+      this.animal = res.animal;
+      this.idAni = res.idAni;
+      this.nome = res.animal.nome;
       this.recuperarUsuario();
       this.feedbackBarras();
       this.atualizarAnimacao();
@@ -138,10 +140,9 @@ export class ModalDetalhesAnimalComponent implements OnInit, OnDestroy {
       this.atualizarUsuario();
       this.atualizarAnimal();
       this.pubsub.$pub("atualizar-usuario", this.dono);
-      this.pubsub.$pub("atualizar-posicaoBarra", this.dono.statusAmbiente);
       this.pubsub.$pub("atualizar-qtdmoedas", this.dono.dinheiro);
       this.pubsub.$pub("feedback-titulo", {nivel:this.dono.nivel, pontuacao:this.dono.pontuacao});
-      this.pubsub.$pub("mudar-anim-animal");
+      this.pubsub.$pub("mudar-anim-animal", {animal:this.animal,idAni:this.idAni});
       this.animal = undefined;
       this.dono = undefined;
       this.nome = "Doguinho";
